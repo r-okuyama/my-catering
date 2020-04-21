@@ -1,0 +1,450 @@
+@charset "UtF-8";
+
+/* ①共通設定 */
+
+body{
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+header{/*ヘッダーを追従させる*/
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(17, 17, 71);
+    font-weight: 2px;
+}
+
+ul{
+    list-style: none;
+}
+
+.nav>ul>li{
+    display: flex;/*文字を中央にする*/
+    flex-direction: column;/*文字を中央にする*/
+    justify-content: center;/*文字を中央にする*/
+    align-items: center;/*文字を中央にする*/
+}
+
+.content-wrap{
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+footer{
+    width: 100%;
+    margin: 0 auto;
+    background-color: #ff9933;
+    color: white;
+}
+
+
+.contact-btn{/* ①お問い合わせボタン */
+    width: 100%;
+    height: auto;
+    color: whitesmoke;
+    background-color: #305089;
+    padding: 0.7em;
+}
+
+
+.text-h1{/* ①各項目見出し */
+    text-align: center;
+    color: #305089;
+    margin: 6em auto;
+}
+
+.text-h1>h1>span{
+    background: linear-gradient(transparent 80%, yellow 70%);
+}
+
+
+/* ②ヘッダー */
+.hd-wrap{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;/*②menu等を右に寄せる*/
+    background-color: white;
+}
+
+#logo{
+    width: 40%;
+    height: 100%;
+    color: #f5a500;
+    text-align: left;
+    padding: 0.7em;
+    font-weight: bold;
+    font-family: "游ゴシック体", "Yu Gothic", sans-serif;
+}
+
+#menu-btn{
+    width: auto;
+    height: auto;
+    color: whitesmoke;
+    background-color: #305089;
+    padding: 0.7em;
+    margin-left: 0.2em;
+}
+
+.nav-list{
+    display: none;/* ②PC用ナビ消去 */
+}
+
+.mobile-nav-list>ul{
+    width: 100%;
+    display: flex;
+}
+
+.mobile-nav-list>ul>li{
+    display: block;
+    display: flex;/*文字を中央にする*/
+    flex-direction: column;/*文字を中央にする*/
+    justify-content: center;/*文字を中央にする*/
+    align-items: center;/*文字を中央にする*/
+}
+
+@media (min-width: 900px){
+
+    header{/*追従時の横幅設定*/
+        max-width: 1024px;
+
+    }
+    .mobile-nav-list{
+        display: none;
+    }
+
+    .nav-list{
+        display: block;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .hd-nav{
+        width: 100%;
+    }
+    
+    .nav-list>li{
+        color: #305089;
+        margin-left: 5em;
+    }
+
+    #logo{
+        width: 20%;
+    }
+}
+
+/* メイン画像 */
+.main-pic{
+    width: 100%;
+    height: 30em;
+    background-image: url("main.jpeg");
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.main-text{
+    display: flex;
+    flex-direction: column;/*文字をセンターに置く*/
+    justify-content: center;/*文字をセンターに置く*/
+    align-items: center;/*文字をセンターに置く*/
+    margin-top: 6em;
+}
+
+.main-text>p{
+    color: whitesmoke;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 0.8em;
+}
+
+#text-catering{
+    font-size: 1.5em;
+}
+
+#text-price{
+    font-size: 1.8em;
+}
+
+/* イントロダクション */
+.box-wrap{
+    width: 100%;
+}
+
+.content-box{
+    margin-bottom: 2em;
+}
+
+.content-box>img{
+    width: 100%;
+}
+
+.cn-text{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 0.5em;
+}
+
+.cn-text>h3{
+    margin-bottom: 0.5em;
+}
+
+@media (min-width: 900px){/*イントロダクションPC版*/
+    .intoroduction-cn{
+        width: 100%;
+        height: auto;
+    }
+
+    .box-wrap{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 5em;
+    }
+
+    .content-box{
+        width: 30%;
+        height: auto;
+    }
+    
+    .content-box>img{
+        width: 300px;
+        height: 200px;
+    }
+
+    .cn-text>h3{
+        text-align: center;
+    }
+
+    .cn-text>p{
+        padding: 0.2rem;
+        color: #333333;
+    }
+}
+
+/* プラン内容 */ 
+.plan-wrap{
+    width: 100%;
+    height: auto;
+}
+
+.plan-box{
+    width: 70%;
+    height: 17em;
+    margin: 10em auto;
+    margin-bottom: 2em;
+    background-color: #ff9933;
+    position: relative;
+}
+
+.plan-box>img{
+    width: 85%;
+    height: auto;
+    position: absolute;
+    top: -20%;
+    left: -5%;
+}
+
+.plan-text{
+    position: absolute;
+    bottom: 1.5em;
+    right: 0.5em;
+}
+
+.plan-text>h3, .plan-text>p{
+    color: whitesmoke;
+}
+
+.plan-text>h3>span{
+    background: linear-gradient(transparent 90%, #FFF8cf 70%);
+}
+
+@media (min-width: 600px){/*プラン内容のレスポンシブ*/
+    .plan-box{
+        width: 60%;
+        height: 15em;
+        margin: 0 auto;
+        background-color: #FFF8cf;
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 5em;
+        margin-top: 7em;
+        position: relative;
+    }
+    
+    .plan-box>img{
+        width: 55%;
+        height: auto;
+        position: absolute;
+        left: -15%;
+        top: -30%;
+    }
+    
+    .plan-text{
+        width: 55%;
+        right: 0.5em;
+        bottom: 1em;
+    }
+    
+    .plan-text>h3{
+        color: #333333;
+        margin: 0.4em;
+    }
+
+    .plan-text>h3>span{
+        background: linear-gradient(transparent 90%, #ffcc00 70%);
+    }
+    
+    .plan-text>p{
+        line-height: 1.5em;
+        color: #333333;
+    }
+}
+
+/* 対応エリア */
+
+.area-bax-wrap{
+    width: 100%;
+}
+
+.area-box{
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 1.5em;
+}
+
+/* お問い合わせ */
+.form-wrap{
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+form{
+    width: 100%;
+}
+
+table{
+    margin: 0 auto;
+    width: 90%;
+}
+
+input{
+    width: 90%;
+    padding: 0.5em;
+    margin: 0.5em;
+    border: solid 0.1em #ddd;
+}
+
+textarea{
+    width: 90%;
+    height: auto;
+    margin: 0.5em;
+    padding: 0.5em;
+    border: solid 0.1em #ddd;
+
+}
+
+#submit-btn{
+    width: 10em;
+    height: 3em;
+    background-color: #193278;
+    color: whitesmoke;
+    border-radius: 0.5em;
+}
+
+
+/* 電話でのお問い合わせ */
+.tel-contact{
+    width: 100%;
+    height: auto;
+    margin: 5em auto;
+}
+
+.tel-box{
+    width: 100%;
+    height: auto;
+}
+
+.tel-box>p{
+    font-size: 1.5rem;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 0.8rem;
+}
+
+#tel-num{
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+.return{
+    width: 100%;
+    height: 4em;
+    position: relative; 
+}
+
+.return>a{
+    width: 13rem;
+    height: 3rem;
+    background-color: #305089;
+    margin: 0 auto;
+    display: flex;/*文字を中央にする*/
+    flex-direction: column;/*文字を中央にする*/
+    justify-content: center;/*文字を中央にする*/
+    align-items: center;/*文字を中央にする*/
+    color: whitesmoke;
+}
+
+@media (min-width: 900px){
+    .tel-contact{
+        width: 100%;
+        height: auto;
+        margin: 5em auto;
+    }
+
+    .return>a{
+        position: absolute;
+        right: 1em;
+    }
+}
+
+/* フッター */
+.ft-wrap{
+    width: auto;
+    height: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin: 0 auto;
+}
+
+.company>h1{
+    width: 100%;
+    font-family: "游ゴシック体", "Yu Gothic", sans-serif;
+    padding-left: 0.5rem;
+    margin: 1rem 0;
+}
+
+.company>p{
+    width: 100%;
+    line-height: 2rem;
+    padding-left: 0.5rem;
+    margin: 0;
+}
+
+.Inc{
+    width: 100%;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.Inc>p{
+    bottom: 0;
+    font-size: 0.5em;
+}
