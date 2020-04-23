@@ -2,6 +2,11 @@
 
 /* ①共通設定 */
 
+*{
+    margin: 0;
+    padding: 0;
+}
+
 body{
     max-width: 1024px;
     margin: 0 auto;
@@ -360,7 +365,7 @@ table{
 input{
     width: 90%;
     padding: 0.5em;
-    margin: 0.5em;
+    margin: 1.5em;
     border: solid 0.1em #ddd;
 }
 
@@ -379,6 +384,7 @@ textarea{
     background-color: #193278;
     color: whitesmoke;
     border-radius: 0.5em;
+    margin-top: 5em;
 }
 
 
