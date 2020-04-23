@@ -84,6 +84,7 @@ footer{
 
 .hd-nav{
     width: 100%;
+    margin: 0 auto;
 }
 
 .nav-list{
@@ -103,9 +104,7 @@ footer{
 }
 
 .mobile-list>li{
-    width: 40%;
     display: block;
-    margin-right: 0;
     display: flex;/*文字を中央にする*/
     flex-direction: column;/*文字を中央にする*/
     justify-content: center;/*文字を中央にする*/
@@ -137,11 +136,16 @@ footer{
         display: none;
     }
 
+    .nav{
+        width: 100%;
+        margin-right: 0;
+    }
+
     .nav-list{
         display: block;
         width: 100%;
         display: flex;
-        justify-content: flex-end;
+        justify-content: space-between;
     }
 
     .hd-nav{
@@ -150,7 +154,6 @@ footer{
     
     .nav-list>li{
         color: #305089;
-        margin-left: 5em;
     }
 
     #logo{
@@ -163,7 +166,6 @@ footer{
     width: 100%;
     height: 30em;
     background-image: url("main.jpeg");
-    margin: 0 auto;
     overflow: hidden;
 }
 
@@ -250,6 +252,7 @@ footer{
 .plan-wrap{
     width: 100%;
     height: auto;
+    margin: 0 auto;
 }
 
 .plan-box{
